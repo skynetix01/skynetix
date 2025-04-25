@@ -1,0 +1,262 @@
+/* service.module.css */
+.servicesPage {
+    background: #000000;
+    color: #e4d7d7;
+    min-height: 100vh;
+    padding-top: 70px; /* Offset for fixed navbar */
+  }
+  
+  /* Intro Section */
+  .introSection {
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background: #000000;
+  }
+  
+  .introSection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(197, 211, 240, 0.05) 0%, transparent 70%);
+    animation: pulse 6s infinite ease-in-out;
+    z-index: 0;
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.2); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 0.5; }
+  }
+  
+  .introContent {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .introTitle {
+    font-size: 4rem;
+    background: linear-gradient(90deg, #c5d3f0, #e4d7d7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+    text-shadow: 0 5px 15px rgba(197, 211, 240, 0.3);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .introSection.visible .introTitle {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .introText {
+    font-size: 1.5rem;
+    color: #e4d7d7;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out 0.3s, transform 0.8s ease-out 0.3s;
+  }
+  
+  .introSection.visible .introText {
+    opacity: 0.9;
+    transform: translateY(0);
+  }
+  
+  /* Services Section */
+  .servicesSection {
+    padding: 6rem 2rem;
+  }
+  
+  .servicesContainer {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .servicesGrid {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    justify-content: center; /* Center cards horizontally */
+    align-items: flex-start; /* Align cards at the top */
+    gap: 3rem; /* Spacing between cards */
+  }
+  
+  .serviceCard {
+    position: relative;
+    background: linear-gradient(145deg, rgba(9, 9, 9, 0.95), rgba(24, 24, 24, 0.85));
+    border-radius: 20px;
+    max-width: 400px;
+   height:630px;
+   min-height:fit-content; /* Changed from fixed width to max-width */
+    width: 100%; /* Allow card to shrink if container is smaller */
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  
+  .servicesSection.visible .serviceCard {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .serviceCard:hover {
+    transform: translateY(-10px) rotate(2deg);
+    box-shadow: 0 15px 40px rgba(197, 211, 240, 0.2);
+  }
+  
+  .cardImageWrapper {
+    position: relative;
+    width: 100%;
+    height: 250px;
+  }
+  
+  .serviceImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .serviceCard:hover .serviceImage,.cardOverlay {
+    transform: scale(1.1);
+  }
+  
+  .cardOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(150deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8));
+    transition: opacity 0.5s ease;
+  }
+  
+  .serviceCard:hover .cardOverlay {
+    opacity: 0.9;
+  }
+  
+  .cardContent {
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .serviceTitle {
+    font-size: 2.2rem;
+    color: #c5d3f0;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .featureList {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+  }
+  
+  .featureItem {
+    font-size: 1.1rem;
+    color: #f6f2f2;
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+  
+  .featureItem::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #c5d3f0;
+    font-size: 1.2rem;
+    transition: color 0.4s ease;
+  }
+  
+  .serviceCard:hover .featureItem::before {
+    color: #e4d7d7;
+  }
+  
+  .serviceLink {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    color: #000000;
+    background: linear-gradient(120deg, #c5d3f0, #e4d7d7);
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.4s ease;
+  }
+  
+  .serviceLink:hover {
+    background: linear-gradient(120deg, #e4d7d7, #c5d3f0);
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(197, 211, 240, 0.5);
+  }
+  
+  /* CTA Section */
+  .ctaSection {
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, #1a1a1a, #000000);
+    text-align: center;
+  }
+  
+  .ctaContent {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .ctaTitle {
+    font-size: 2.8rem;
+    color: #c5d3f0;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .ctaSection.visible .ctaTitle {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .ctaText {
+    font-size: 1.5rem;
+    color: #e4d7d7;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out 0.2s, transform 0.8s ease-out 0.2s;
+  }
+  
+  .ctaSection.visible .ctaText {
+    opacity: 0.9;
+    transform: translateY(0);
+  }
+  
+  .ctaButton {
+    display: inline-block;
+    padding: 1.2rem 3.5rem;
+    font-size: 1.3rem;
+    color: #000000;
+    background: linear-gradient(120deg, #c5d3f0, #e4d7d7);
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.4s ease;
+  }
+  
+  .ctaButton:hover {
+    background: linear-gradient(120deg, #e4d7d7, #c5d3f0);
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(197, 211, 240, 0.6);
+  }

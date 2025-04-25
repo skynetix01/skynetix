@@ -1,0 +1,122 @@
+.policiesContainer {
+    background: #000000;
+    color: #e4d7d7;
+    min-height: 100vh;
+    padding-top: 70px;
+  }
+  
+  /* Header */
+  .header {
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(197, 211, 240, 0.05), transparent 50%);
+    transform: skewY(-5deg);
+    z-index: 0;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .headerTitle {
+    font-size: 4rem;
+    background: linear-gradient(90deg, #c5d3f0, #e4d7d7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+    text-shadow: 0 5px 15px rgba(197, 211, 240, 0.3);
+    animation: fadeInUp 0.8s ease forwards;
+  }
+  
+  /* Main Content */
+  .mainContent {
+    padding: 2rem;
+  }
+  
+  .policySection {
+    margin-bottom: 4rem;
+    animation: fadeInUp 0.6s ease forwards;
+  }
+  
+  .sectionTitle {
+    font-size: 2.5rem;
+    color: #c5d3f0;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+    animation: fadeIn 0.6s ease forwards;
+  }
+  
+  .subSectionTitle {
+    font-size: 1.8rem;
+    color: #c5d3f0;
+    margin: 1.5rem 0 1rem;
+    animation: fadeIn 0.6s ease 0.1s forwards;
+  }
+  
+  .paragraph {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    animation: fadeInUp 0.6s ease 0.2s forwards;
+  }
+  
+  .list {
+    list-style-type: disc;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .listItem {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+    animation: fadeInUp 0.6s ease 0.3s forwards;
+  }
+  
+  .link {
+    color: #c5d3f0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .link:hover {
+    color: #e4d7d7;
+    text-decoration: underline;
+  }
+  
+  /* Keyframe Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
