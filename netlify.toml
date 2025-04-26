@@ -1,6 +1,7 @@
 [build]
+  base = "skynetix"
   command = "npm run build"
-  publish = ".next"
+  publish = ".netlify"
   environment = { NODE_VERSION = "18" }
 
 [[plugins]]
@@ -10,8 +11,6 @@
   from = "/*"
   to = "/.netlify/functions/___netlify-server-handler"
   status = 200
-  force = true
-  conditions = { Role = ["dynamic"] }
 
 [[headers]]
   for = "/_next/static/*"
