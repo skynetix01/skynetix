@@ -28,7 +28,7 @@ export default function Home() {
       {/* Updated About Us Section */}
       <section className={`${styles.aboutSection} ${styles.visible}`}>
         <div className={styles.aboutContainer}>
-          <h2 className={styles.sectionTitle}>About Us</h2>
+          <h2 className={styles.sectionTitles}>About Us</h2>
           <div className={styles.aboutContent}>
             <div className={styles.aboutImageWrapper}></div>
             <div className={styles.aboutTextWrapper}>
@@ -64,13 +64,13 @@ export default function Home() {
 
       {/* Services Section */}
       <section className={`${styles.servicesSection} ${styles.visible}`}>
-        <h2 className={styles.sectionTitle}>Our Services</h2>
+        <h2 className={styles.sectionTitles}>Our Services</h2>
         <Services />
       </section>
 
       {/* Why Choose Us Section */}
       <section className={`${styles.whyChooseUsSection} ${styles.visible}`}>
-        <h2 className={styles.sectionTitle}>Why Choose Us</h2>
+        <h2 className={styles.sectionTitles}>Why Choose Us</h2>
         <div className={styles.whyChooseUsFlex}>
           <div className={styles.whyChooseUsCard}>
             <div className={styles.whyChooseUsIcon}>🧠</div>
@@ -101,7 +101,7 @@ export default function Home() {
 
       {/* Our Work Section */}
       <section className={`${styles.ourWorkSection} ${styles.visible}`}>
-        <h2 className={styles.sectionTitle}>Our Work</h2>
+        <h2 className={styles.sectionTitles}>Our Work</h2>
         <Projects />
         <div className={styles.seeMoreSection}>
           <p className={styles.seeMoreText}>
@@ -117,7 +117,7 @@ export default function Home() {
       <section className={`${styles.contactSection} ${styles.visible}`}>
         <div className={styles.contactContainer}>
           <div className={styles.contactFormSide}>
-            <h2 className={styles.sectionTitle}>Let’s Connect</h2>
+            <h2 className={styles.sectionTitles}>Let’s Connect</h2>
             <p className={styles.contactSubtitle}>Reach out and let us bring your vision to life.</p>
             <form className={styles.contactForm}>
               <div className={styles.formGroup}>
