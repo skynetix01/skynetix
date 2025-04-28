@@ -9,7 +9,7 @@ export const ClientOnlyVideo = () => {
     setIsMounted(true);
   }, []);
 
-  if (!isMounted) return null; // Skip rendering on server
+//   if (!isMounted) return null;
 
   return (
     <video className={styles.backgroundVideo} autoPlay loop muted playsInline>
