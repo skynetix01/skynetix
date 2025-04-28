@@ -1,6 +1,7 @@
 import styles from '../../styles/Home.module.css';
 import { Services } from '../../components/serviceDetail';
 import { Projects } from '../../components/projectData';
+import { ClientOnlyVideo } from '../../components/clientOnlyVideo';
 import { FaEnvelope, FaPhone, FaTwitter, FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
 import Link from 'next/link';
 
@@ -12,10 +13,8 @@ export default function Home() {
     <div className={styles.home}>
       {/* Main Section */}
       <section className={`${styles.mainSection} ${styles.visible}`}>
-        <video className={styles.backgroundVideo} autoPlay loop muted playsInline>
-          <source src="/assets/background.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        <ClientOnlyVideo/>
+       
         <div className={styles.videoOverlay}></div>
         <div className={styles.mainContent}>
           <h1 className={styles.mainTitle}>Welcome to Skynetix</h1>

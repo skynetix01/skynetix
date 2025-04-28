@@ -116,7 +116,7 @@
   text-align: center;
   margin-bottom: 3.5rem;
   color: #c5d3f0;
-  position: relative;
+  /* position: relative; */
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   /* Removed ::after styles to eliminate the underline */
 }
