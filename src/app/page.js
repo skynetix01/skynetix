@@ -8,7 +8,10 @@ import Link from 'next/link';
 export default function Home() {
   const emailAddress = process.env.NEXT_PUBLIC_EMAIL_ADDRESS || 'info@skynetix.com';
   const contactNumber = process.env.NEXT_PUBLIC_CONTACT_NUMBER || '+1 (555) 123-4567';
-
+  const linkdin = process.env.NEXT_PUBLIC_LINKDIN;
+  const insta = process.env.NEXT_PUBLIC_INSTA;
+  const facebook = process.env.NEXT_PUBLIC_FACEBOOK;
+  const github= process.env.NEXT_PUBLIC_GITHUB;
   return (
     <div className={styles.home}>
       {/* Main Section */}
@@ -172,16 +175,16 @@ export default function Home() {
               <div className={styles.socialLinks}>
                 <h4 className={styles.socialTitle}>Connect With Us</h4>
                 <div className={styles.socialIcons}>
-                  <Link href="https://twitter.com/skynetix" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+                <Link href={facebook} target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
                     <FaTwitter className={styles.socialIcon} />
                   </Link>
-                  <Link href="https://linkedin.com/company/skynetix" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+                  <Link href={linkdin} className={styles.socialLink}>
                     <FaLinkedin className={styles.socialIcon} />
                   </Link>
-                  <Link href="https://github.com/skynetix" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+                  <Link href={github} target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
                     <FaGithub className={styles.socialIcon} />
                   </Link>
-                  <Link href="https://instagram.com/skynetix" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+                  <Link href={insta} target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
                     <FaInstagram className={styles.socialIcon} />
                   </Link>
                 </div>

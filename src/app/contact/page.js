@@ -6,6 +6,10 @@ import ContactForm from '../../../components/ContactForm';
 export default function Contact() {
   const emailAddress = process.env.NEXT_PUBLIC_EMAIL_ADDRESS || 'info@skynetix.com';
   const contactNumber = process.env.NEXT_PUBLIC_CONTACT_NUMBER || '+1 (555) 123-4567';
+  const linkdin = process.env.NEXT_PUBLIC_LINKDIN;
+  const insta = process.env.NEXT_PUBLIC_INSTA;
+  const facebook = process.env.NEXT_PUBLIC_FACEBOOK;
+  const github= process.env.NEXT_PUBLIC_GITHUB;
 
   return (
     <div className={styles.contactPage}>
@@ -53,7 +57,7 @@ export default function Contact() {
               <h3 className={styles.infoTitle}>Connect Online</h3>
               <div className={styles.socialIcons}>
                 <a
-                  href="https://twitter.com/skynetix"
+                  href={facebook}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.socialLink}
@@ -61,7 +65,7 @@ export default function Contact() {
                   <FaTwitter className={styles.socialIcon} />
                 </a>
                 <a
-                  href="https://linkedin.com/company/skynetix"
+                  href={linkdin}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.socialLink}
@@ -69,7 +73,7 @@ export default function Contact() {
                   <FaLinkedin className={styles.socialIcon} />
                 </a>
                 <a
-                  href="https://github.com/skynetix"
+                  href={github}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.socialLink}
@@ -77,7 +81,7 @@ export default function Contact() {
                   <FaGithub className={styles.socialIcon} />
                 </a>
                 <a
-                  href="https://instagram.com/skynetix"
+                  href={insta}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.socialLink}

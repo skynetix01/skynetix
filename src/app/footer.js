@@ -7,7 +7,7 @@ export default function Footer() {
   const emailAddress = process.env.NEXT_PUBLIC_EMAIL_ADDRESS || 'info@skynetix.com';
   const contactNumber = process.env.NEXT_PUBLIC_CONTACT_NUMBER || '+1 (555) 123-4567';
   const address = process.env.NEXT_PUBLIC_ADDRESS || 'Not provided';
-
+  
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContainer}>
